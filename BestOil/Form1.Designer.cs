@@ -198,6 +198,7 @@ namespace BestOil
             // sumRadioButton
             // 
             this.sumRadioButton.AutoSize = true;
+            this.sumRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sumRadioButton.Location = new System.Drawing.Point(15, 56);
             this.sumRadioButton.Name = "sumRadioButton";
             this.sumRadioButton.Size = new System.Drawing.Size(82, 26);
@@ -210,6 +211,7 @@ namespace BestOil
             // countRadioButton
             // 
             this.countRadioButton.AutoSize = true;
+            this.countRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.countRadioButton.Location = new System.Drawing.Point(15, 22);
             this.countRadioButton.Name = "countRadioButton";
             this.countRadioButton.Size = new System.Drawing.Size(124, 26);
@@ -314,15 +316,20 @@ namespace BestOil
             // 
             // priceOfColaTextBox
             // 
+            this.priceOfColaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(9)))), ((int)(((byte)(4)))));
+            this.priceOfColaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.priceOfColaTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.priceOfColaTextBox.Location = new System.Drawing.Point(158, 134);
             this.priceOfColaTextBox.Name = "priceOfColaTextBox";
             this.priceOfColaTextBox.ReadOnly = true;
             this.priceOfColaTextBox.Size = new System.Drawing.Size(83, 27);
             this.priceOfColaTextBox.TabIndex = 15;
+            this.priceOfColaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // colaCheckBox
             // 
             this.colaCheckBox.AutoSize = true;
+            this.colaCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.colaCheckBox.Location = new System.Drawing.Point(22, 136);
             this.colaCheckBox.Name = "colaCheckBox";
             this.colaCheckBox.Size = new System.Drawing.Size(105, 25);
@@ -341,15 +348,20 @@ namespace BestOil
             // 
             // priceOfPotatoTextBox
             // 
+            this.priceOfPotatoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(9)))), ((int)(((byte)(4)))));
+            this.priceOfPotatoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.priceOfPotatoTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.priceOfPotatoTextBox.Location = new System.Drawing.Point(158, 105);
             this.priceOfPotatoTextBox.Name = "priceOfPotatoTextBox";
             this.priceOfPotatoTextBox.ReadOnly = true;
             this.priceOfPotatoTextBox.Size = new System.Drawing.Size(83, 27);
             this.priceOfPotatoTextBox.TabIndex = 12;
+            this.priceOfPotatoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // potatoCheckBox
             // 
             this.potatoCheckBox.AutoSize = true;
+            this.potatoCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.potatoCheckBox.ForeColor = System.Drawing.SystemColors.Window;
             this.potatoCheckBox.Location = new System.Drawing.Point(22, 107);
             this.potatoCheckBox.Name = "potatoCheckBox";
@@ -369,15 +381,20 @@ namespace BestOil
             // 
             // priceOfGamburgTextBox
             // 
+            this.priceOfGamburgTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(9)))), ((int)(((byte)(4)))));
+            this.priceOfGamburgTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.priceOfGamburgTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.priceOfGamburgTextBox.Location = new System.Drawing.Point(158, 76);
             this.priceOfGamburgTextBox.Name = "priceOfGamburgTextBox";
             this.priceOfGamburgTextBox.ReadOnly = true;
             this.priceOfGamburgTextBox.Size = new System.Drawing.Size(83, 27);
             this.priceOfGamburgTextBox.TabIndex = 9;
+            this.priceOfGamburgTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gamburgerCheckBox
             // 
             this.gamburgerCheckBox.AutoSize = true;
+            this.gamburgerCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gamburgerCheckBox.Location = new System.Drawing.Point(22, 78);
             this.gamburgerCheckBox.Name = "gamburgerCheckBox";
             this.gamburgerCheckBox.Size = new System.Drawing.Size(110, 25);
@@ -396,11 +413,18 @@ namespace BestOil
             // 
             // priceOfDogTextBox
             // 
+            this.priceOfDogTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(9)))), ((int)(((byte)(4)))));
+            this.priceOfDogTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.priceOfDogTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.priceOfDogTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.priceOfDogTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.priceOfDogTextBox.Location = new System.Drawing.Point(158, 47);
             this.priceOfDogTextBox.Name = "priceOfDogTextBox";
             this.priceOfDogTextBox.ReadOnly = true;
             this.priceOfDogTextBox.Size = new System.Drawing.Size(83, 27);
             this.priceOfDogTextBox.TabIndex = 6;
+            this.priceOfDogTextBox.TabStop = false;
+            this.priceOfDogTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -423,6 +447,7 @@ namespace BestOil
             // hotDogCheckBox
             // 
             this.hotDogCheckBox.AutoSize = true;
+            this.hotDogCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hotDogCheckBox.Location = new System.Drawing.Point(22, 49);
             this.hotDogCheckBox.Name = "hotDogCheckBox";
             this.hotDogCheckBox.Size = new System.Drawing.Size(85, 25);
@@ -438,6 +463,7 @@ namespace BestOil
             this.totalPayGroupBox.Controls.Add(this.totalSumButon);
             this.totalPayGroupBox.Controls.Add(this.currencyTotalPayLabel);
             this.totalPayGroupBox.Controls.Add(this.totalPayLabel);
+            this.totalPayGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.totalPayGroupBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.totalPayGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.totalPayGroupBox.Location = new System.Drawing.Point(12, 458);
@@ -449,6 +475,7 @@ namespace BestOil
             // 
             // totalOfDayButton
             // 
+            this.totalOfDayButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalOfDayButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.totalOfDayButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.totalOfDayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -462,6 +489,7 @@ namespace BestOil
             // 
             // totalSumButon
             // 
+            this.totalSumButon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.totalSumButon.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlText;
             this.totalSumButon.FlatAppearance.BorderSize = 3;
             this.totalSumButon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
