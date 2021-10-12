@@ -40,24 +40,24 @@ namespace BestOil
             FormClosing += new FormClosingEventHandler(this.Form1_Closing);
             foreach (var item in Enum.GetValues(typeof(Fuel)))
             {
-                comboBox1.Items.Add(item.ToString());
+                fuelTypeComboBox.Items.Add(item.ToString());
             }
-            comboBox1.SelectedIndex = 0;
-            radioButton1.Checked = true;
-            textBox4.Enabled = false;
-            textBox5.Enabled = false;
-            textBox7.Enabled = false;
-            textBox9.Enabled = false;
+            fuelTypeComboBox.SelectedIndex = 0;
+            countRadioButton.Checked = true;
+            countDogTextBox.Enabled = false;
+            countGamburgTextBox.Enabled = false;
+            countPotatoTextBox.Enabled = false;
+            countColaTextBox.Enabled = false;
 
             values = new Dictionary<string, int>();
             values.Add("Хот дог", 4);
             values.Add("Гамбургер", 5);
             values.Add("Картошка фри", 7);
             values.Add("Кока кола", 4);
-            textBox3.Text = values["Хот дог"].ToString();
-            textBox6.Text = values["Гамбургер"].ToString();
-            textBox8.Text = values["Картошка фри"].ToString();
-            textBox10.Text = values["Кока кола"].ToString();           
+            priceOfDogTextBox.Text = values["Хот дог"].ToString();
+            priceOfGamburgTextBox.Text = values["Гамбургер"].ToString();
+            priceOfPotatoTextBox.Text = values["Картошка фри"].ToString();
+            priceOfColaTextBox.Text = values["Кока кола"].ToString();           
 
         }       
 
@@ -71,281 +71,281 @@ namespace BestOil
             return value / price;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void FuelTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int choice = comboBox1.SelectedIndex;
+            int choice = fuelTypeComboBox.SelectedIndex;
             switch (choice)
             {
                 case 0: 
-                    textBox11.Text = 27.ToString();
-                    if (radioButton1.Checked && textBox1.Text != "")
+                    priceOfFuelTextBox.Text = 27.ToString();
+                    if (countRadioButton.Checked && countLitresTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox1.Text);
-                        label7.Text = Sum(27, val).ToString();
+                        int val = int.Parse(countLitresTextBox.Text);
+                        totalPayFuelLabel.Text = Sum(27, val).ToString();
                     }
-                    if (radioButton2.Checked && textBox2.Text != "")
+                    if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox2.Text);
-                        label7.Text = Liters(27, val).ToString();
+                        int val = int.Parse(sumOfFuelTextBox.Text);
+                        totalPayFuelLabel.Text = Liters(27, val).ToString();
                     }
                     break;
                 case 1:
-                    textBox11.Text = 25.ToString();
-                    if (radioButton1.Checked && textBox1.Text != "")
+                    priceOfFuelTextBox.Text = 25.ToString();
+                    if (countRadioButton.Checked && countLitresTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox1.Text);
-                        label7.Text = Sum(25, val).ToString();
+                        int val = int.Parse(countLitresTextBox.Text);
+                        totalPayFuelLabel.Text = Sum(25, val).ToString();
                     }
-                    if (radioButton2.Checked && textBox2.Text != "")
+                    if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox2.Text);
-                        label7.Text = Liters(25, val).ToString();
+                        int val = int.Parse(sumOfFuelTextBox.Text);
+                        totalPayFuelLabel.Text = Liters(25, val).ToString();
                     }
                     break;
                 case 2:
-                    textBox11.Text = 22.ToString();
-                    if (radioButton1.Checked && textBox1.Text != "")
+                    priceOfFuelTextBox.Text = 22.ToString();
+                    if (countRadioButton.Checked && countLitresTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox1.Text);
-                        label7.Text = Sum(22, val).ToString();
+                        int val = int.Parse(countLitresTextBox.Text);
+                        totalPayFuelLabel.Text = Sum(22, val).ToString();
                     }
-                    if (radioButton2.Checked && textBox2.Text != "")
+                    if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox2.Text);
-                        label7.Text = Liters(22, val).ToString();
+                        int val = int.Parse(sumOfFuelTextBox.Text);
+                        totalPayFuelLabel.Text = Liters(22, val).ToString();
                     }
                     break;
                 case 3:
-                    textBox11.Text = 15.ToString();
-                    if (radioButton1.Checked && textBox1.Text != "")
+                    priceOfFuelTextBox.Text = 15.ToString();
+                    if (countRadioButton.Checked && countLitresTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox1.Text);
-                        label7.Text = Sum(15, val).ToString();
+                        int val = int.Parse(countLitresTextBox.Text);
+                        totalPayFuelLabel.Text = Sum(15, val).ToString();
                     }
-                    if (radioButton2.Checked && textBox2.Text != "")
+                    if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
                     {
-                        int val = int.Parse(textBox2.Text);
-                        label7.Text = Liters(15, val).ToString();
+                        int val = int.Parse(sumOfFuelTextBox.Text);
+                        totalPayFuelLabel.Text = Liters(15, val).ToString();
                     }
                     break;
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void CountRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            groupBox4.Text = "К оплате";
-            label8.Text = "грн";
-            textBox2.Enabled = false;
-            if(!radioButton1.Checked)
-                textBox2.Enabled = true;
-            if (textBox1.Text != "")
+            totalPayFuelGroupBox.Text = "К оплате";
+            currencyTotalFuelLabel.Text = "грн";
+            sumOfFuelTextBox.Enabled = false;
+            if(!countRadioButton.Checked)
+                sumOfFuelTextBox.Enabled = true;
+            if (countLitresTextBox.Text != "")
             {
-                int liters = int.Parse(textBox1.Text);
-                int price = int.Parse(textBox11.Text);
+                int liters = int.Parse(countLitresTextBox.Text);
+                int price = int.Parse(priceOfFuelTextBox.Text);
                 summaryFuel = liters * price;
-                label7.Text = summaryFuel.ToString();
+                totalPayFuelLabel.Text = summaryFuel.ToString();
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void SumRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            groupBox4.Text = "К выдаче";
-            label8.Text = "Л";
-            textBox1.Enabled = false;
-            if (!radioButton2.Checked)
-                textBox1.Enabled = true;
-            if(textBox2.Text != "")
+            totalPayFuelGroupBox.Text = "К выдаче";
+            currencyTotalFuelLabel.Text = "Л";
+            countLitresTextBox.Enabled = false;
+            if (!sumRadioButton.Checked)
+                countLitresTextBox.Enabled = true;
+            if(sumOfFuelTextBox.Text != "")
             {
-                int sum = int.Parse(textBox2.Text);
-                int price = int.Parse(textBox11.Text);
+                int sum = int.Parse(sumOfFuelTextBox.Text);
+                int price = int.Parse(priceOfFuelTextBox.Text);
                 summaryFuel = sum / price;
-                label7.Text = summaryFuel.ToString();
+                totalPayFuelLabel.Text = summaryFuel.ToString();
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void CountLitresTextBox_TextChanged(object sender, EventArgs e)
         {
-            textBox2.Enabled = false;
-            radioButton1.Checked = true;
-            textBox2.Enabled = false;
-            if (textBox1.Text == "")
+            sumOfFuelTextBox.Enabled = false;
+            countRadioButton.Checked = true;
+            sumOfFuelTextBox.Enabled = false;
+            if (countLitresTextBox.Text == "")
             {
-                textBox2.Enabled = true;
-                radioButton2.Enabled = true;
-                label7.Text = "0";
+                sumOfFuelTextBox.Enabled = true;
+                sumRadioButton.Enabled = true;
+                totalPayFuelLabel.Text = "0";
                 return;
             }
-            int liters = int.Parse(textBox1.Text);
-            int price = int.Parse(textBox11.Text);
+            int liters = int.Parse(countLitresTextBox.Text);
+            int price = int.Parse(priceOfFuelTextBox.Text);
             summaryFuel = liters * price;
-            label7.Text = summaryFuel.ToString();
+            totalPayFuelLabel.Text = summaryFuel.ToString();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void SumOfFuelTextBox_TextChanged(object sender, EventArgs e)
         {
 
-            textBox1.Enabled = false;
-            radioButton2.Checked = true;
-            textBox1.Enabled = false;
-            if (textBox2.Text == "")
+            countLitresTextBox.Enabled = false;
+            sumRadioButton.Checked = true;
+            countLitresTextBox.Enabled = false;
+            if (sumOfFuelTextBox.Text == "")
             {
-                textBox1.Enabled = true;
-                radioButton1.Enabled = true;
-                label7.Text = "0";
+                countLitresTextBox.Enabled = true;
+                countRadioButton.Enabled = true;
+                totalPayFuelLabel.Text = "0";
                 return;
             }
-            int sum = int.Parse(textBox2.Text);
-            int price = int.Parse(textBox11.Text);
+            int sum = int.Parse(sumOfFuelTextBox.Text);
+            int price = int.Parse(priceOfFuelTextBox.Text);
             summaryFuel = sum / price;
-            label7.Text = summaryFuel.ToString();
+            totalPayFuelLabel.Text = summaryFuel.ToString();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void HotDogCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (hotDogCheckBox.Checked)
             {
-                textBox4.Enabled = true;
-                sumHotDogs = Sum(int.Parse(textBox3.Text), countHotDogs);
+                countDogTextBox.Enabled = true;
+                sumHotDogs = Sum(int.Parse(priceOfDogTextBox.Text), countHotDogs);
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
             else
             {
-                textBox4.Enabled = false;
+                countDogTextBox.Enabled = false;
                 sumHotDogs = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
            
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void CountDogTextBox_TextChanged(object sender, EventArgs e)
         {
-            if(textBox4.Text == "")
+            if(countDogTextBox.Text == "")
             {
                 countHotDogs = 0;
                 sumHotDogs = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
                 return;
             }
-            countHotDogs = int.Parse(textBox4.Text);            
-            sumHotDogs = Sum(int.Parse(textBox3.Text), countHotDogs);
+            countHotDogs = int.Parse(countDogTextBox.Text);            
+            sumHotDogs = Sum(int.Parse(priceOfDogTextBox.Text), countHotDogs);
             summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-            label10.Text = summary.ToString();
+            totalPayProductsLabel.Text = summary.ToString();
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void CountGamburgTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox5.Text == "")
+            if (countGamburgTextBox.Text == "")
             {
                 countGamburger = 0;
                 sumGamburger = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
                 return;
             }
-            countGamburger = int.Parse(textBox5.Text);
-            sumGamburger = Sum(int.Parse(textBox6.Text), countGamburger);
+            countGamburger = int.Parse(countGamburgTextBox.Text);
+            sumGamburger = Sum(int.Parse(priceOfGamburgTextBox.Text), countGamburger);
             summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-            label10.Text = summary.ToString();
+            totalPayProductsLabel.Text = summary.ToString();
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void GamburgerCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
+            if (gamburgerCheckBox.Checked)
             {
-                textBox5.Enabled = true;
-                sumGamburger = Sum(int.Parse(textBox6.Text), countGamburger);
+                countGamburgTextBox.Enabled = true;
+                sumGamburger = Sum(int.Parse(priceOfGamburgTextBox.Text), countGamburger);
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
             else
             {
-                textBox5.Enabled = false;
+                countGamburgTextBox.Enabled = false;
                 sumGamburger = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void PotatoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked)
+            if (potatoCheckBox.Checked)
             {
-                textBox7.Enabled = true;
-                sumPotatos = Sum(int.Parse(textBox8.Text), countPotatos);
+                countPotatoTextBox.Enabled = true;
+                sumPotatos = Sum(int.Parse(priceOfPotatoTextBox.Text), countPotatos);
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
             else
             {
-                textBox7.Enabled = false;
+                countPotatoTextBox.Enabled = false;
                 sumPotatos = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void CountPotatoTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox7.Text == "")
+            if (countPotatoTextBox.Text == "")
             {
                 countPotatos = 0;
                 sumPotatos = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
                 return;
             }
-            countPotatos = int.Parse(textBox7.Text);
-            sumPotatos = Sum(int.Parse(textBox8.Text), countPotatos);
+            countPotatos = int.Parse(countPotatoTextBox.Text);
+            sumPotatos = Sum(int.Parse(priceOfPotatoTextBox.Text), countPotatos);
             summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-            label10.Text = summary.ToString();
+            totalPayProductsLabel.Text = summary.ToString();
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void ColaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked)
+            if (colaCheckBox.Checked)
             {
-                textBox9.Enabled = true;
-                sumCola = Sum(int.Parse(textBox10.Text), countCola);
+                countColaTextBox.Enabled = true;
+                sumCola = Sum(int.Parse(priceOfColaTextBox.Text), countCola);
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
             else
             {
-                textBox9.Enabled = false;
+                countColaTextBox.Enabled = false;
                 sumCola = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
             }
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void CountColaTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox9.Text == "")
+            if (countColaTextBox.Text == "")
             {
                 countCola = 0;
                 sumCola = 0;
                 summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-                label10.Text = summary.ToString();
+                totalPayProductsLabel.Text = summary.ToString();
                 return;
             }
-            countCola = int.Parse(textBox9.Text);
-            sumCola = Sum(int.Parse(textBox10.Text), countCola);
+            countCola = int.Parse(countColaTextBox.Text);
+            sumCola = Sum(int.Parse(priceOfColaTextBox.Text), countCola);
             summary = sumHotDogs + sumGamburger + sumCola + sumPotatos;
-            label10.Text = summary.ToString();
+            totalPayProductsLabel.Text = summary.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TotalSumButton_Click(object sender, EventArgs e)
         {
             int total = 0;
-            if (radioButton2.Checked && textBox2.Text != "")
+            if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
             {
-                int sumFuel = int.Parse(textBox2.Text);
+                int sumFuel = int.Parse(sumOfFuelTextBox.Text);
                 total = sumFuel + summary;
-                label12.Text = total.ToString();
+                totalPayLabel.Text = total.ToString();
                 if (proceed == 0)
                     proceed = total;
                 else
@@ -354,7 +354,7 @@ namespace BestOil
             else
             {
                 total = summaryFuel + summary;
-                label12.Text = total.ToString();
+                totalPayLabel.Text = total.ToString();
                 if (proceed == 0)
                     proceed = total;
                 else
@@ -371,20 +371,20 @@ namespace BestOil
 
         private void ResetForm()
         {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
+            hotDogCheckBox.Checked = false;
+            gamburgerCheckBox.Checked = false;
+            potatoCheckBox.Checked = false;
+            colaCheckBox.Checked = false;
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox7.Clear();
-            textBox9.Clear();
+            countLitresTextBox.Clear();
+            sumOfFuelTextBox.Clear();
+            countDogTextBox.Clear();
+            countGamburgTextBox.Clear();
+            countPotatoTextBox.Clear();
+            countColaTextBox.Clear();
 
-            label12.Text = "0";
-            comboBox1.SelectedIndex = 0;
+            totalPayLabel.Text = "0";
+            fuelTypeComboBox.SelectedIndex = 0;
         }
 
         private void Form1_Closing(object sender, FormClosingEventArgs e)
@@ -408,12 +408,12 @@ namespace BestOil
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void TotalOfDayButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Выручка за день составляет: " + proceed + " грн.");
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             timerCount += 1;
             if(timerCount == 3)
