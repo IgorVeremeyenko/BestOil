@@ -340,27 +340,28 @@ namespace BestOil
 
         private void TotalSumButton_Click(object sender, EventArgs e)
         {
-            int total = 0;
+            /*int total = 0;*/
+            proceed = 0;
             if (sumRadioButton.Checked && sumOfFuelTextBox.Text != "")
             {
                 int sumFuel = int.Parse(sumOfFuelTextBox.Text);
-                total = sumFuel + summary;
-                totalPayLabel.Text = total.ToString();
-                if (proceed == 0)
+                proceed = sumFuel + summary;
+                totalPayLabel.Text = proceed.ToString();
+                /*if (proceed == 0)
                     proceed = total;
                 else
-                    proceed += total;
+                    proceed += total;*/
             }
             else
             {
-                total = summaryFuel + summary;
-                totalPayLabel.Text = total.ToString();
-                if (proceed == 0)
+                proceed = summaryFuel + summary;
+                totalPayLabel.Text = proceed.ToString();
+                /*if (proceed == 0)
                     proceed = total;
                 else
-                    proceed += total;
+                    proceed += total;*/
             }
-            if (total == 0)
+            if (proceed == 0)
             {
                 MessageBox.Show("Не проделано ни одной операции", "Сообщение");
                 return;
